@@ -468,7 +468,7 @@ proc defineSymbols*() =
                         SetSym(w.s, cleanY[i])
                 else:
                     for i,w in cleanX:
-                        SetSym(w.s, y)
+                        SetSym(w.s, copyValue(y))
             else:
                 SetInPlace(y)
                 if y.kind==Function:
