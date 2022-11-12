@@ -354,7 +354,7 @@ proc dump*(v: Value, level: int=0, isLast: bool=false, muted: bool=false, prepen
             var instrs: ValueArray = @[]
             var j = 0
             while j < v.trans.instructions.len:
-                let op = (OpCode)(v.trans.instructions[j])
+                let op = OpCode(v.trans.instructions[j])
                 instrs.add(newWord(stringify(OpCode(op))))
                 if op in {opPush, opStore, opCall, opLoad, opStorl, opAttr, opEol}:
                     j += 1

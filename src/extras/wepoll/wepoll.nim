@@ -43,11 +43,11 @@ const header_file = currentSourcePath().splitPath.head / "wepoll.h"
 
 type
   EPOLL_EVENTS* = enum
-    EPOLLIN = (int)(1 shl 0), EPOLLPRI = (int)(1 shl 1), EPOLLOUT = (int)(1 shl 2),
-    EPOLLERR = (int)(1 shl 3), EPOLLHUP = (int)(1 shl 4), EPOLLRDNORM = (int)(1 shl 6),
-    EPOLLRDBAND = (int)(1 shl 7), EPOLLWRNORM = (int)(1 shl 8),
-    EPOLLWRBAND = (int)(1 shl 9), EPOLLMSG = (int)(1 shl 10), ##  Never reported.
-    EPOLLRDHUP = (int)(1 shl 13), EPOLLONESHOT = (int)(1 shl 31)
+    EPOLLIN = int(1 shl 0), EPOLLPRI = int(1 shl 1), EPOLLOUT = int(1 shl 2),
+    EPOLLERR = int(1 shl 3), EPOLLHUP = int(1 shl 4), EPOLLRDNORM = int(1 shl 6),
+    EPOLLRDBAND = int(1 shl 7), EPOLLWRNORM = int(1 shl 8),
+    EPOLLWRBAND = int(1 shl 9), EPOLLMSG = int(1 shl 10), ##  Never reported.
+    EPOLLRDHUP = int(1 shl 13), EPOLLONESHOT = int(1 shl 31)
 
 
 const

@@ -357,7 +357,7 @@ proc ExecLoop*(cnst: ValueArray, it: VBinary) =
     while true:
         {.computedGoTo.}
 
-        op = (OpCode)(it[i])
+        op = OpCode(it[i])
 
         #echo "Executing: " & (stringify(op)) & " at " & $(i)# & " with next: " & $(it[i+1])
 

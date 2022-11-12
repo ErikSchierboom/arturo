@@ -363,7 +363,7 @@ elif not defined(NOGMP):
         if z.iKind==NormalInteger: Z = newBigInteger(z.i)
 
         if y.iKind==NormalInteger:
-            newInteger(exp(X.bi, (culong)(y.i), Z.bi))
+            newInteger(exp(X.bi, culong(y.i), Z.bi))
         else:
             newInteger(exp(X.bi, y.bi, Z.bi))
 else:
